@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	https://www.springframework.org/schema/beans/spring-beans.xsd
+ 	https://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+ 
+ 	<!-- standalone list -->
+ 	
+ 	<!-- <util:list list-class="java.util.LinkedList" id="mybestfriends">
+ 		<value>Aman</value>
+ 		<value>Raman</value>
+ 		<value>Ankit</value>
+ 		<value>Rohit</value>
+ 	</util:list> -->
+ 
+ 	<bean class="com.springcore.standalone.collection.Person" name="person1">
+ 		<!-- <property name="friends" ref="mybestfriends" /> -->
+ 		<property name="friends" >
+ 			<list>
+ 				<value>Aman</value>
+				<value>Raman</value>
+				<value>Ankit</value>
+				<value>Rohit</value>
+ 			</list>
+ 		</property>
+ 		
+ 		<property name="feestructure">
+ 			<map>
+ 				<entry key="Spring Framework" value="8000"/>
+ 				<entry key="Django Framework" value="5000"/>
+ 				<entry key="Hibernate Framework" value="2000"/>
+ 				<entry key="SpringBoot Framework" value="3000"/>
+ 			</map>
+ 		</property>
+ 		
+ 		<property name="properties">
+ 			<props>
+ 				<prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+ 				<prop key="username">root</prop>
+ 				<prop key="password">ismail@123</prop>
+ 				<prop key="url">mysql:jdbc://localhost:3306/youtube</prop>
+ 			</props>
+ 		</property>
+ 		
+ 	</bean>
+
+</beans>

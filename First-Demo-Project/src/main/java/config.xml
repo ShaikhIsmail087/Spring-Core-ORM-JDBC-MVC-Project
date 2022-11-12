@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ 	<!--first bean by value as  a element-->
+ 	<!-- This is our beans by p: schema-->
+ 
+	<bean class="com.tut.app.App.Student" name="student1" p:studentId="24234" p:studentName="Ismail Shaikh" p:studentAddress="Mumbai sub"/>
+	<bean class="com.tut.app.App.Student" name="student2" p:studentId="65263" p:studentName="Sabir shaikh" p:studentAddress="Banglore"/>
+	
+	<!--second bean by value as attribute-->
+	
+	<bean class="com.tut.app.App.Student" name="student3">
+	
+		<property name="studentId" value="1341" />
+		<property name="studentName" value="Shafiullah"/>
+		<property name="studentAddress" value="Dubai"/>
+			
+	</bean>
+
+</beans>
